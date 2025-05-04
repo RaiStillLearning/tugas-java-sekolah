@@ -17,7 +17,7 @@ public class InputGabungan {
 
         switch (pilihan) {
             case 1:
-                pakaiScanner();
+                pakaiScanner(scanner); // Kirim objek scanner ke metode
                 break;
             case 2:
                 pakaiBufferedReader();
@@ -31,9 +31,7 @@ public class InputGabungan {
     }
 
     // Metode Scanner
-    public static void pakaiScanner() {
-        Scanner input = new Scanner(System.in);
-
+    public static void pakaiScanner(Scanner input) {
         System.out.print("Masukkan jari-jari lingkaran: ");
         double r = input.nextDouble();
         System.out.println("Keliling lingkaran: " + (2 * Math.PI * r));
